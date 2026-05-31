@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al Taller de Desarrollo Web</title>
+</head>
+<body>
+
+    <h1>Formulario de Inscripción: Taller de Desarrollo Web</h1>
+    <p>Por favor, complete todos los campos requeridos para registrar su participación en el taller.</p>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            
+            <label for="nombre">Nombres y apellidos:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required minlength="3" maxlength="80">
+            <br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            <br><br>
+
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 0987654321" pattern="[0-9]{10}" required>
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="15" max="80" step="1" required>
+            <br><br>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Datos académicos</legend>
+
+            <label for="carrera">Carrera o curso:</label>
+            <input type="text" id="carrera" name="carrera" placeholder="Ej. Ingeniería en Sistemas" required minlength="4">
+            <br><br>
+
+            <label for="nivel">Nivel académico:</label>
+            <select id="nivel" name="nivel" required>
+                <option value="">Seleccione una opción</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="tecnologico">Tecnológico</option>
+                <option value="universitario">Universitario</option>
+                <option value="posgrado">Posgrado</option>
+            </select>
+            <br><br>
+
+            <label for="institucion">Institución educativa:</label>
+            <input type="text" id="institucion" name="institucion" placeholder="Ej. Universidad Politécnica Salesiana" required>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Preferencias del taller</legend>
+
+            <p><strong>Modalidad del taller:</strong></p>
+            <input type="radio" id="presencial" name="modalidad" value="presencial" required>
+            <label for="presencial">Presencial</label>
+            
+            <input type="radio" id="virtual" name="modalidad" value="virtual">
+            <label for="virtual">Virtual</label>
+            
+            <input type="radio" id="hibrida" name="modalidad" value="hibrida">
+            <label for="hibrida">Híbrida</label>
+
+            <p><strong>Temas de interés:</strong></p>
+            <input type="checkbox" id="html" name="temas" value="html">
+            <label for="html">HTML5 (Estructura semántica)</label>
+            <br>
+            <input type="checkbox" id="css" name="temas" value="css">
+            <label for="css">CSS3 (Estilos y Diseño transaccional)</label>
+            <br>
+            <input type="checkbox" id="js" name="temas" value="javascript">
+            <label for="js">JavaScript (Interactividad nativa)</label>
+
+            <p><strong>Nivel de conocimiento previo:</strong></p>
+            <input type="radio" id="basico" name="nivel_conocimiento" value="basico" required>
+            <label for="basico">Básico</label>
+            
+            <input type="radio" id="intermedio" name="nivel_conocimiento" value="intermedio">
+            <label for="intermedio">Intermedio</label>
+            
+            <input type="radio" id="avanzado" name="nivel_conocimiento" value="avanzado">
+            <label for="avanzado">Avanzado</label>
+            <br><br>
+
+            <label for="color">Color favorito para el entorno de desarrollo:</label>
+            <input type="color" id="color" name="color" value="#0000ff">
+            <br><br>
+
+            <label for="motivacion">Nivel de motivación (1 al 10):</label>
+            <input type="range" id="motivacion" name="motivacion" min="1" max="10" step="1" value="5">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Disponibilidad</legend>
+
+            <label for="fecha_inicio">Fecha preferida para iniciar:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            <br><br>
+
+            <label for="hora">Hora disponible:</label>
+            <input type="time" id="hora" name="hora" required>
+            <br><br>
+
+            <label for="jornada">Jornada preferida:</label>
+            <select id="jornada" name="jornada" required>
+                <option value="">Seleccione una jornada</option>
+                <option value="manana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información adicional</legend>
+
+            <label for="archivo">Subir archivo de ejemplo (Captura o documento de prueba):</label>
+            <input type="file" id="archivo" name="archivo" accept=".pdf,.png,.jpg,.jpeg">
+            <br><br>
+
+            <label for="portafolio">Enlace a su portafolio o perfil académico:</label>
+            <input type="url" id="portafolio" name="portafolio" placeholder="https://github.com/tu-usuario">
+            <br><br>
+
+            <label for="comentarios">Comentarios adicionales:</label>
+            <br>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="50" placeholder="Escriba aquí cualquier observación adicional..."></textarea>
+            <br><br>
+
+            <button type="submit">Enviar inscripción</button>
+            <button type="reset">Limpiar formulario</button>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
